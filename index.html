@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Score</title>
+    <link rel="icon" type="image" href="th (1).jfif">
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Display:wght@700&family=Poppins:wght@300&family=Rubik+Gemstones&display=swap');
+    
+
+    *{
+        margin: 0;padding: 0;
+    }
+
+    .container{
+        width: 100vw;
+        height: 100vh;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .wrapper{
+        width: 570px;
+        height: 385px;
+        background: #1B244A;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 100px;
+    }
+
+    h2{
+      color: white;
+      font-size: 45px;  
+      text-align: center;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    #number-house,#number-guest{
+        text-align: center;
+        font-size: 90px;
+        color: #F94F6D;
+        margin-top: 21px;
+        background: #000;
+        padding-top: 10px;
+        width: 155px;
+        height: 110px;
+        font-family: 'Big Shoulders Stencil Display', cursive;
+    }
+
+    .add{
+        display: flex;
+        gap: 10px;
+        margin-top: 30px;
+        cursor: pointer;
+        box-sizing: border-box;
+    }
+    
+    #add-1,#add-2,#add-3{
+        width: 45px;
+        font-size: 20px;
+        height: 45px;
+        border: 2px dashed #9AABD8;
+        border-radius: 5px;
+        display: flex;align-items: center;
+        justify-content: center;
+        font-family: 'Big Shoulders Stencil Display', cursive;
+        color: #9AABD8;
+    }
+
+</style>
+<body>
+<div class="container">
+    <div class="wrapper">
+        <div class="home">
+            <h2>Home</h2>
+            <div id="number-house">0</div>
+            <div class="add">
+                <div onclick="addOne()" id="add-1">+ 1</div>
+                <div onclick="addtwo()" id="add-2">+ 2</div>
+                <div onclick="addthree()" id="add-3">+ 3</div>
+            </div>
+        </div>
+        <div class="Guest">
+            <h2>Guest</h2>
+            <div id="number-guest">0</div>
+            <div class="add">
+                <div onclick="add1()" id="add-1">+ 1</div>
+                <div onclick="add2()" id="add-2">+ 2</div>
+                <div onclick="add3()" id="add-3">+ 3</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    let add=document.getElementsByClassName("number")
+    let countHouse=0
+
+
+    function addOne(){
+        countHouse+=1
+        document.getElementById("number-house").innerHTML=countHouse
+    }
+    function addtwo(){
+        countHouse+=2
+        document.getElementById("number-house").innerHTML=countHouse
+    }
+    function addthree(){
+        countHouse+=3
+        document.getElementById("number-house").innerHTML=countHouse
+    }
+
+
+    let countGuest=0
+
+    function add1(){
+        countGuest+=1
+        document.getElementById("number-guest").innerHTML=countGuest
+    }
+    function add2(){
+        countGuest+=2
+        document.getElementById("number-guest").innerHTML=countGuest
+    }
+    function add3(){
+        countGuest+=3
+        document.getElementById("number-guest").innerHTML=countGuest
+    }
+    
+</script>
+    
+</body>
+</html>
