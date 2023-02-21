@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{margin: 0;padding: 0;}
+
+    .container{
+        background-color: rgb(29, 0, 37);
+        gap: 20px;width: 100vw;height: 100vh;
+        display: flex;align-items: center;justify-content: center;
+    }
+
+    h2{
+        color: whitesmoke;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 5rem;
+    }
+
+    button{
+        width: 18rem;height: 2.5rem;
+        background: #37d011;
+        color: white;
+        font-size: 25px;
+        cursor: pointer;
+        border: 3px  white;
+        border-style: dotted;
+    }
+</style>
+<body>
+
+    <div class="container">
+       <h2 id="h2">0</h2>
+       <button onclick="increament()">Increase +</button>
+       <h2 id="h3">0</h2>
+       <button onclick="decrease()" style="background-color: red;">Decrease -</button>
+    </div>
+    
+
+
+    <script>
+        // var myage=18
+        // var go=2
+        // console.log(myage+go)
+
+
+        // var myage=18
+        // var humndog=4
+
+        // var mydogage=myage+humndog
+        // console.log(mydogage)
+
+
+        let pluscount=0
+
+        function increament(){
+            pluscount=pluscount+1
+            document.getElementById("h2").innerHTML=pluscount
+        }
+
+        let minuscount=0
+        function decrease(){
+            minuscount=minuscount-1
+            document.getElementById("h3").innerHTML=minuscount
+        }
+    </script>
+</body>
+</html>
